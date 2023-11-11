@@ -12,7 +12,11 @@ WORKDIR /app
 # Copy requirements.txt into the container
 COPY requirements.txt /app/requirements.txt
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN python3 -m venv /venv
+
+ENV PATH="/venv/bin:$PATH"
+
+RUN /venv/bin/pip install --no-cache-dir -r requirements.txt
 
 # Copy bot files into the container
 COPY . /app
