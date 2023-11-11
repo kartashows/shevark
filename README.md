@@ -8,3 +8,6 @@ for this setup you need your bot token and your id (find @botfather in tg for th
 5. Replace `my-token` with your actual bot token and run `sed -i 's/TOKEN=.*/TOKEN=my-token/' .env`
 6. Replace `my-id` with your telegram id and run `sed -i 's/ADMIN_ID=.*/ADMIN_ID=my-id/' .env`
 7. Run `sudo docker-compose up -d`
+
+
+to stop everything run `sudo docker-compose down`
