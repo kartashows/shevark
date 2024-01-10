@@ -12,7 +12,7 @@ services:
 
   bot:
     build: .
-    depends_on:
+    links:
       - postgres
     volumes:
       - .:/app
